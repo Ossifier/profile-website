@@ -1,0 +1,332 @@
+.stop-animations * {
+    animation: none !important;
+    transition: none !important;
+}
+
+::-webkit-scrollbar {
+    width: 1.5vw;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(75, 75, 75);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 100);
+    border-left: 0.4vw solid rgb(75, 75, 75);
+    border-right: 0.4vw solid rgb(75, 75, 75);
+
+    transition: ease-out 1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(120, 120, 120);
+
+    transition: ease-out 1s;
+}
+
+* {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {min-width: 50%;}
+
+.container {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 10vw repeat(9, 1fr);
+    grid-template-rows: 8vw auto;
+    grid-template-areas: 
+        "l h h h h h h h h h"
+        "b c c c c c c c c c"
+        "b c c c c c c c c c";
+
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    bottom: 0em;
+}
+
+/* >>> TOP BAR FORMATTING <<< */
+
+.logo {
+    width: 12vw;
+    height: 8vw;
+
+    grid-area: l;
+}
+
+.logo > img {
+    margin-top: 0px;
+    margin-left: 0vw;
+}
+
+.header {
+    grid-area: h;
+    width: auto;
+    overflow: hidden;
+}
+
+
+
+/* >>>                                <<< */
+/* >>> MAIN NAV BUTTONS -- FORMATTING <<< */
+/* >>>                                <<< */
+
+.main-nav-buttons {
+    height: auto;
+    grid-area: b;
+    background-color: rgb(60, 60, 60);
+
+    padding-top: 2.5vw;
+}
+
+.nav-btn-unfocused {
+    text-align: left;
+    padding-left: 1.5vw;
+    height: 3vw;
+    width: 100%;
+    background-color: rgb(60, 60, 60);
+    color: rgb(160, 160, 160);
+    border: none;
+    margin-top: 1vw;
+
+    font-size: 1vw;
+    font-weight: 400;
+    letter-spacing: 0.15vw;
+
+    transition: ease-out 0.75s;
+}
+
+.main-nav-buttons > button:hover {
+    background-color: rgb(80, 100, 105);
+    color: rgb(255, 255, 255);
+}
+
+.nav-btn-focused {
+    background-color: rgb(145, 205, 210);
+    color: black;
+    width: 120%;
+}
+
+
+
+/* >>>                                       <<< */
+/* >>> HORIZONATAL NAV BUTTONS -- FORMATTING <<< */
+/* >>>                                       <<< */
+
+#horiz-nav-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+
+    grid-area: hb;
+}
+
+#horiz-nav-buttons > button {
+    width: 4vw;
+    height: 8vw;
+    background-color: rgb(60, 60, 60);
+    color:rgb(175, 175, 175);
+    border: none;
+    font-size: 3vw;
+    
+    transition: ease-in 0.5s;
+}
+
+#horiz-nav-buttons > button:hover {
+    background-color: rgb(80, 100, 105);
+    color: rgb(255, 255, 255);
+}
+
+#horiz-nav-buttons > button:active {
+    background-color: rgb(145, 205, 210);
+    color: black;
+    transition: 0s;
+}
+
+
+/* >>> CONTENT -- HEADERS & ANIMATIONS <<< */
+
+
+.content-header {
+    grid-area: hr;
+
+    text-align: center;
+    letter-spacing: 4vw;
+    color:rgb(100, 100, 100);
+    padding: 1vw;
+
+    font-size: 3.5vw;
+    font-weight: 400;
+    transform: translateX(2vw);
+
+    transition: 0.6s;
+    transition-timing-function: cubic-bezier(0.2, 0.6, 0.9, 1);
+}
+
+
+
+
+
+/* >>> CONTENT -- ABOUT ME <<< */
+
+.content {
+    height: auto;
+    width: auto;
+    background-color: rgb(75, 75, 75);
+    grid-area: c;
+
+    overflow: auto;
+}
+
+#content-wrapper {
+    height: calc(100% - 7vw);
+    margin: 3.5vw;
+    background-color: rgb(60, 60, 60);
+
+    overflow-x: hidden;
+
+    display: grid;
+    grid-template-rows: 7vw 6vw 4vw;
+    grid-template-areas:
+        "hr"
+        "ct"
+        "hb";
+}
+
+
+.content-main > p {
+    padding-left: 6vw;
+    padding-right: 6vw;
+
+    color: rgb(190, 190, 190);
+
+    font-size: 0.75vw;   
+    letter-spacing: 0.2vw;
+}
+
+#about-me-main {
+    grid-area: ct;
+
+    padding-left: 6vw;
+    padding-right: 6vw;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+
+}
+
+#about-me-wrapper > p {
+    text-align: left;
+    color: rgb(190, 190, 190);
+    
+    font-size: 0.8vw;   
+    letter-spacing: 0.25vw;
+}
+
+.about-me-img {
+    text-align: center;
+}
+
+.signature-pic {
+    text-align: right;
+    padding-right: 4vw;
+}
+
+.signature-pic > img {
+    width: 19vw;
+    height: 4vw;
+
+    padding-top: 1vw;
+}
+
+.profile-pic {
+    width: calc(100% - 3vw);
+
+}
+
+#services-main {
+    grid-area: ct;
+}
+
+#projects-main {
+    grid-area: ct;
+}
+
+#photography-main {
+    grid-area: ct;
+}
+
+
+
+
+/* CONTENT -- CONTACT */
+
+#contact-main {
+    margin-right: auto;
+    margin-left: auto;
+    grid-area: ct;
+
+    text-align: center;
+}
+
+.contact-header-inputs {
+    width: 65vw;
+}
+
+.contact-header-inputs > input {
+    width: 23.9vw;
+    background-color: rgb(175, 175, 175);
+    color: black;
+    padding: 0.5vw 0.5vw;
+    margin: 0.5vw 0.5vw;
+    border: none;
+
+    cursor: auto;
+
+    font-size: 1vw;
+    letter-spacing: 0.2vw;
+}
+
+.contact-header-inputs > input:nth-child(n+3) {
+    width: 50vw;
+}
+
+.contact-header-inputs > textarea {
+    width: 50vw;
+    height: 10vw;
+    background-color: rgb(175, 175, 175);
+    color: black;
+    padding: 0.5vw 0.5vw;
+    margin: 0.5vw 0.5vw;
+    border: none;
+
+    font-size: 1vw;
+    letter-spacing: 0.2vw;
+
+    resize: none;
+}
+
+.contact-message-input {
+    height: 20vw;
+}
+
+
+
+/* COPYRIGHT */
+
+.copyright-notice {
+    color: rgb(140, 140, 140);
+    position: fixed;
+    right: 0.75em;
+    bottom: 0.75em;
+
+    font-size: 0.75vw;
+}
