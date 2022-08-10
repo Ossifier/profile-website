@@ -1,8 +1,8 @@
 # profile-website
 Personal profile website designed in HTML/CSS/JavaScript.
 
-This is an under construction personal profile website designed to function as an illustration of my webdev capabilities.
-This website will also function as a hub for sharing various other projects that I work on and complete as I continue developing them, as well as any relevant news.
+This is an under construction personal profile website designed to function as a learning project to develop my web design and programming capabilities.
+Upon completion, this website will also function as a hub for sharing various other projects that I work on and complete as I continue developing them, as well as any relevant news.
 
 To examine the page and its components, download all files as a zip, extract, and open the filed entitled "index.html" in your web browser.
 
