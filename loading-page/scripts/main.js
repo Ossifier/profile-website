@@ -4,7 +4,7 @@ const loadPage = document.querySelector('.load-page'),
     wlcmText = document.querySelector('.welcome-text');
 
 let i = 0,
-    Throttle = 0.8; // Decrease this number for slower simulated loadtime, or vice versa.
+    throttle = 0.8; // Decrease this number for slower simulated loadtime, or vice versa.
 
 function draw() {
   if(i <= 101) {
